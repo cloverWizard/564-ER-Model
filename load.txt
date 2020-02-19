@@ -1,0 +1,26 @@
+.separator |
+.import dat/Item.dat Item
+UPDATE Item 
+SET ItemID = NULL 
+WHERE ItemID == "NULL";
+
+.separator |
+.import dat/Category.dat Category
+.separator |
+.import dat/User.dat User
+.separator |
+.import dat/Bid.dat Bid
+.separator |
+.import dat/Belong.dat Belong
+.separator |
+.import dat/Sell.dat Sell
+
+UPDATE User SET Location = NULL WHERE Location == "NULL";
+UPDATE User SET Country = NULL WHERE Country == "NULL";
+UPDATE Item SET Name = NULL WHERE Name == "NULL";
+UPDATE Item SET Description = NULL WHERE Description == "NULL";
+UPDATE User SET Rating = NULL WHERE Rating == -1;
+UPDATE Item SET Currently = NULL WHERE Currently == -1;
+UPDATE Item SET Buy_Price = NULL WHERE Buy_Price == -1;
+UPDATE Item SET First_Bid = NULL WHERE First_Bid == -1;
+
